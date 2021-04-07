@@ -109,17 +109,6 @@ clearBtn.addEventListener("click", function (event) {
 
 
 // search old ingredients from local storage, enable buttons  
-
-// for (var i=0; i<=6; i++) {
-//   var ingredienti = document.querySelector("#ingredient"+i);
-//   ingredienti.addEventListener("click", function(event) {  
-//     ingredients.push(ingredients[ingredients.length-(i-1)]);
-//     ingredientInput.value = "";
-//     storeingredients();
-//     location.reload();
-//   });
-// }
-
 ingredient0.addEventListener("click", function (event) {
   ingredients.push(ingredients[ingredients.length - 1]);
   ingredientInput.value = "";
@@ -220,7 +209,7 @@ fetch(ingURL)
               var drinkNameDisplayValue = data['drinks'][0]['strDrink'] + " ";
               var strDrinkThumb = data['drinks'][0]['strDrinkThumb'];
               
-              var measureANDing1 = data['drinks'][0]['strMeasure'+i+1] + " of " + data['drinks'][0]['strIngredient1'];
+              var measureANDing1 = data['drinks'][0]['strMeasure1'] + " " + data['drinks'][0]['strIngredient1'];
               recipeSearchDisplay1.textContent = measureANDing1;
               
               drinkDisplay.setAttribute("style", "display: none;");
