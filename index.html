@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
+    /> -->
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -17,7 +17,9 @@
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Mix-It-Up</title>
 </head>
@@ -26,56 +28,133 @@
     <header class="header">
         <h3>Mix-It-Up</h3>
     </header>
+    <nav class=navHeader>
+        <button id="home-Btn" class="searchBtn"> Home Screen </button> <button id="drink-Btn" class="searchBtn"> Cocktails </button>  <button id="meal-Btn" class="searchBtn"> Meals </button> 
+    </nav>
 
-    <aside>
-        <header class="header">
-            <h3>Search an alcohol or ingredient:</h3>
-        </header>
-            <input type="text" name="ingredient-text" id="ingredient-text" placeholder="Enter ingredient here..." />
-            <button id="searchBtn" class="searchBtn">🔍 </button> </br> </br>
-        <ul id="city-list"></ul>
-            <div class="yourSearches"><strong>Your current search:</strong></div></br>
-            <button class="stockIngredients" id=ingredient0><span id="drinkSearchDisplay0"></span></button> </br></br>
-            <div class="yourSearches"><strong>Your past searches:</strong></div></br>          
-            <button class="stockIngredients" id=ingredient1><span id="drinkSearchDisplay1"></span></button> </br>
-            <button class="stockIngredients" id=ingredient2><span id="drinkSearchDisplay2"></span></button> </br>
-            <button class="stockIngredients" id=ingredient3><span id="drinkSearchDisplay3"></span></button> </br>
-            <button class="stockIngredients" id=ingredient4><span id="drinkSearchDisplay4"></span></button> </br>
-            <button class="stockIngredients" id=ingredient5><span id="drinkSearchDisplay5"></span></button> </br>
-            <button class="stockIngredients" id=ingredient6><span id="drinkSearchDisplay6"></span></button> </br>
-            <button class="clearBtn" id=clearBtn>Clear search history</button> </br>
-    </aside>
+    <div class="row">
 
-    <!-- display page 1 with drink name -->
-    <div class=drink-display id=drink-button-list>
-        <header class="header">
-            <h3>Suggested drinks:</h3>
-        </header>
-        <ul class=header2>
-            <h5>Click on a drink to get the recipe and step-by-step mixing instructions.</h5>
-        </ul>
-    </div>
+        <div class="col s3">
+          <!-- Grey navigation panel -->
 
-    <!-- display page 2 with drink recipe, depending on user -->
-    <div class=recipe-display id=drink-button-list>
-    <header class="header">
-        <h3>Drink Recipe for:</h3>
-    </header>
-    <div class="header2" id=recipeData0><span id="recipeSearchDisplay0"></span><img class=image src="strDrinkThumb" alt="Girl in a jacket"></div> </br>
-    <div class="stockIngredients" id=recipeData1><span id="recipeSearchDisplay1"></span></div> </br>
-    <div class="stockIngredients" id=recipeData2><span id="recipeSearchDisplay2"></span></div> </br>
-    <div class="stockIngredients" id=recipeData3><span id="recipeSearchDisplay3"></span></div> </br>
-    </div> 
-   
+            <!-- DRINKS -->
+            <!-- drinks aside  -->
+            <aside class="drink-search-aside">
+                <header class="header">
+                    <h3>Search an alcohol or drink ingredient:</h3>
+                </header>
+                    <button id="searchBtnDrink" class="searchBtnDrink">🔍 </button>
+                    <div class=inputDiv><input type="text" name="ingredient-text" id="ingredient-text" placeholder="Enter ingredient here..." /></div> </br> </br>
+                    <div class="yourSearches"><strong>Your searches:</strong></div></br>
+                    <button class="stockIngredients" id=ingredient0><span id="drinkSearchDisplay0"></span></button> </br>       
+                    <button class="stockIngredients" id=ingredient1><span id="drinkSearchDisplay1"></span></button> </br>
+                    <button class="stockIngredients" id=ingredient2><span id="drinkSearchDisplay2"></span></button> </br>
+                    <button class="stockIngredients" id=ingredient3><span id="drinkSearchDisplay3"></span></button> </br>
+                    <button class="stockIngredients" id=ingredient4><span id="drinkSearchDisplay4"></span></button> </br>
+                    <button class="stockIngredients" id=ingredient5><span id="drinkSearchDisplay5"></span></button> </br>
+                    <button class="stockIngredients" id=ingredient6><span id="drinkSearchDisplay6"></span></button> </br>
+                    <button class="clearBtnDrink" id=clearBtnDrink>Clear search history</button> </br>
+            </aside>
+
+            <!-- MEAL -->
+            <!-- meal aside  -->
+            <aside class="meal-search-aside">
+                <header class="header">
+                    <h3>Search a meal ingredient:</h3>
+                </header>  
+                    <button id="searchBtnmeal" class="searchBtnmeal">🔍 </button>
+                    <div class=inputDiv><input type="text" name="meal-ingredient-text" id="meal-ingredient-text" placeholder="Enter ingredient here..." /></div></br> </br>
+                    <div class="yourSearches"><strong>Your searches:</strong></div></br>
+                    <button class="stockIngredients" id=mealIngredient0><span id="mealSearchDisplay0"></span></button> </br>     
+                    <button class="stockIngredients" id=mealIngredient1><span id="mealSearchDisplay1"></span></button> </br>
+                    <button class="stockIngredients" id=mealIngredient2><span id="mealSearchDisplay2"></span></button> </br>
+                    <button class="stockIngredients" id=mealIngredient3><span id="mealSearchDisplay3"></span></button> </br>
+                    <button class="stockIngredients" id=mealIngredient4><span id="mealSearchDisplay4"></span></button> </br>
+                    <button class="stockIngredients" id=mealIngredient5><span id="mealSearchDisplay5"></span></button> </br>
+                    <button class="stockIngredients" id=mealIngredient6><span id="mealSearchDisplay6"></span></button> </br>
+                    <button class="clearBtnmeal" id=clearBtnmeal>Clear search history</button> </br>
+            </aside>
+        
+        </div>
+  
+        <div class="col s9 teal accent-2">
+          <!-- Teal page content  -->
+        
+              <!-- display page 1 with DRINK name -->
+                <div class=drink-display-header id=drink-button-list-header>
+                    <header class="header">
+                        <h3>Suggested drinks:</h3>
+                    </header>
+                    <ul class=header2>
+                        <h5>Click on a drink to get the recipe and step-by-step mixing instructions.</h5>
+                    </ul>
+                </div>
+                <div class=drink-display id=drink-button-list>
+                </div>
+
+                <!-- display page 2 with DRINK recipe, depending on user input search-->
+                <div class=recipe-drink-display-header id=ingredient-button-list-header>
+                    <header class="header">
+                        <h3>Drink recipe for: <span id="recipeSearchDisplay0"></span></h3>
+                    </header>
+                    <ul class="header" id=recipeData0>
+                        <h5><img class=image alt="Drink Image"></h5>
+                    </ul>
+                    <div class=drinkInfoBox>This <span id="str-Alcoholic"></span> drink in the <span id="str-Category"></span> catagory should be served in a <span id="str-Glass"></span>.</div></br>
+                    <div class=drinkInfoBox><strong>Mixing instructions: </strong><span id="str-Instructions"></span></div></br>
+                    <div class=drinkInfoBoxb><strong>Click on a button below to search for more drinks that include the ingredient.</strong></div></br>
+                    <!-- <li class="stockIngredients" id=recipeData1><span id="recipeSearchDisplay1"></span></li> </br> -->
+                </div> 
+                <div class=recipe-drink-display id=ingredient-button-list>
+                </div> 
+            
+                <!-- display page 1 with MEAL names -->
+                <div class="meal-display-header" id="meal-button-list-header">
+                    <header class="header">
+                        <h3>Suggested meals:</h3>
+                    </header>
+                    <ul class="header2">
+                        <h5>Click on a meal to get the recipe and step-by-step preperation instructions.</h5>
+                    </ul>
+                </div>
+                <div class="meal-display" id="meal-button-list">
+                </div>
+
+                <!-- display page 2 with MEAL recipe, depending on user input search-->
+                <div class=recipe-meal-display-header id=meal-ingredient-button-list-header>
+                <header class="header">
+                    <h3>Meal recipe for: <span id="mealrecipeSearchDisplay0"></span></h3>
+                </header>
+                <ul class="header" id=recipeData0>
+                    <h5><img class=image alt="meal Image"></h5>
+                </ul>
+                <div class=mealInfoBox>This is a <span id="str-Area"></span> meal in the <span id="meal-str-Category"></span> category.</div></br>
+                <div class=mealInfoBox><strong>Cooking instructions: </strong><span id="meal-str-Instructions"></span></div></br>
+                <div class=wrap>
+                <iframe width="560" height="315" class=videoMeal title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </br></br>
+                <div class=mealInfoBoxb><strong>Click on a button below to search for more meals that include the ingredient.</strong></div></br>
+                <!-- <li class="stockIngredients" id=recipeData1><span id="recipeSearchDisplay1"></span></li> </br> -->
+
+                </div>
+                <div class=recipe-meal-display id=meal-ingredient-button-list>
+                </div>
+        </div>
+  
+      </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+
 <script src="script.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
