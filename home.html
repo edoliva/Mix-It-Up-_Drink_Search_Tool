@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./home.css"/>
+    <title>Mix It Up</title>
+    </head>
+    
+    <body>    
+        <nav>
+        <div class="nav-wrapper teal">
+          <div class="center brand-logo">Mix It Up</div>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="https://www.themealdb.com/api/json/v1/1/lookup.php?i=52859" class="nav-item hoverable waves-effect waves-orange">Food</a></li>
+            <li><a href="https://www.thecocktaildb.com/api/json/v1/1/" class="nav-item hoverable waves-effect waves-orange">Cocktails</a></li>
+            <li><a href="https://api.punkapi.com/v2/beers?abv_gt=6&abv_lt=10" class="nav-item hoverable waves-effect waves-orange">Beer</a></li>
+            <li><a href="file:///C:/Users/Nicholas/repos/Mix-It-Up-_Drink_Search_Tool/home.html#!" class="nav-item hoverable waves-effect waves-orange">Home Page</a></li>
+          </ul>
+        </div>
+        </nav>
+        
+        <div class="ingredient-input row">
+                  <div class="input-field col s2">
+                    <h5>Ingredient Search</h5>
+                    <textarea id="ingredient-text" class="ingredient-text materialize-textarea center"></textarea><button id="searchBtn" class="searchBtn">🔍</button>
+                    <div class="collection">
+                      <ul class="ingredient-list">
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 1</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 2</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 3</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 4</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 5</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 6</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 7</a>
+                        <a href="#!" class="collection-item hoverable waves-effect">Search 8</a>
+                        <a href="#!" class="collection-item hoverable waves-effect" id="clearBtn">Clear search history</a>
+                      </ul>
+                    </div>                          
+        </div>
+
+        <section class="searchdisplay container section">
+        <div class="row center">
+                <ul class="col s10 collection with-header">
+                    <li class="collection-header teal white-text text-white"><h4>Suggested Recipes</h4></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData1><span id="recipeSearchDisplay1"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData2><span id="recipeSearchDisplay2"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData3><span id="recipeSearchDisplay3"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData4><span id="recipeSearchDisplay4"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData1><span id="recipeSearchDisplay1"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData2><span id="recipeSearchDisplay2"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData3><span id="recipeSearchDisplay3"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData4><span id="recipeSearchDisplay4"></span>Click on drink to get recipe</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData1><span id="recipeSearchDisplay1"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData2><span id="recipeSearchDisplay2"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData3><span id="recipeSearchDisplay3"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData4><span id="recipeSearchDisplay4"></span>Click on drink to get recipe</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData1><span id="recipeSearchDisplay1"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData2><span id="recipeSearchDisplay2"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData3><span id="recipeSearchDisplay3"></span>"        "</a></li>
+                    <li><a href class="stockIngredients collection-item teal white-text text-white" id=recipeData2><span id="recipeSearchDisplay2"></span>"        "</a></li>
+                  </ul>
+        </section>
+      
+        <footer>
+          <div class = "footer-wrapper row valign-wrapper teal white-text text-white">Team 2 Copyright 2021</div>
+        </footer>
+      
+      </div>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>
