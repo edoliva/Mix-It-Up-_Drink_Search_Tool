@@ -1,1 +1,410 @@
+/* body {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Roboto", sans-serif;
+    background-color: wheat;
+    color: #001b44;
+  }
+.header {
+    text-align: center;
+    background-color:rgb(13, 39, 25);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid rgb(7, 0, 0);
+    justify-content: center;
+    align-items:center;
+  }
+h3 {
+    padding-top: 5px;
+}
 
+li {
+    height: 110px;
+}
+
+aside {
+    width: 25%;
+    border: 1px solid rgb(7, 0, 0);
+    text-align: center;
+    margin: 10px;
+    float: left;
+    border-radius: 5px;
+}
+
+.drink-display {
+    width: 70%;
+    height: fit-content;
+    border: 1px solid rgb(7, 0, 0);
+    text-align: left;
+    margin: 10px;
+    float:right;
+    border-radius: 5px;
+}
+
+.meal-display {
+    width: 70%;
+    height: fit-content;
+    border: 1px solid rgb(7, 0, 0);
+    text-align: left;
+    margin: 10px;
+    float:right;
+    border-radius: 5px;
+}
+
+
+
+.navHeader {
+    text-align: left;
+    background-color:rgb(240, 164, 114);
+    color: black;
+    border-radius: 30px;
+    margin: 10px;
+    border: 1px solid rgb(7, 0, 0);
+    justify-content: center;
+    align-items:center;
+    width: fit-content;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: x-large;
+    list-style-type: none;
+    position: relative;
+    color: #000;
+}
+
+
+
+.header3 {
+    text-align: left;
+    background-color:wheat;
+    color: rgb(4, 11, 105);
+    border-radius: 5px;
+    margin: 10px;
+    margin-left: 35px;
+    border: 1px solid rgb(7, 0, 0);
+    justify-content: center;
+    align-items:center;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+.header3uv {
+    text-align: left;
+    background-color:rgb(199, 94, 24);
+    color: rgb(4, 11, 105);
+    border-radius: 5px;
+    margin: 10px;
+    margin-left: 35px;
+    border: 1px solid rgb(7, 0, 0);
+    justify-content: center;
+    align-items:center;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+.box {
+    text-align: center;
+    background-color: wheat;
+    color: rgb(10, 20, 168);
+    border-radius: 15px;
+    margin: 10px;
+    margin-left: 35px;
+    border: 1px solid rgb(7, 0, 0);
+    justify-content: center;
+    align-items:center;
+    width: 15%;
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+
+ */
+
+ h5 {
+    font-size: large;
+    text-align: left;
+    font-weight: bold;
+}
+
+img {
+border-radius: 35px;
+width: 100px; 
+height: 100px; 
+}
+
+.image{
+    border-radius: 35px;
+    width: 400px; 
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}
+.drink-search-aside {
+    display: none;
+}
+.drink-display {
+    display:none;
+}
+.drink-display-header {
+    display:none;
+}
+.meal-search-aside {
+    display:none;
+}
+.meal-display {
+    display:none;
+}
+.meal-display-header {
+    display:none;
+}
+button {
+    cursor: pointer;
+}
+
+button:focus {     
+    background-color:rgb(190, 204, 233);    
+}
+
+.recipe-drink-display {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid rgb(7, 0, 0); */
+    display: none;
+    text-align: left;
+    margin: 10px;
+    float:right;
+    border-radius: 5px;
+}
+
+.recipe-drink-display-header {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid rgb(7, 0, 0); */
+    display: none;
+    text-align: left;
+    margin: 10px;
+    float:right;
+    border-radius: 5px;
+}
+
+.recipe-meal-display {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid rgb(7, 0, 0); */
+    display: none;
+    text-align: left;
+    margin: 10px;
+    float:right;
+    border-radius: 5px;
+}
+
+.recipe-meal-display-header {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid rgb(7, 0, 0); */
+    display: none;
+    text-align: left;
+    margin: 10px;
+    float:right;
+    border-radius: 5px;
+}
+
+.header2 {
+    text-align: left;
+    /* background-color:rgb(240, 164, 114); */
+    /* color: black; */
+    /* border-radius: 30px; */
+    margin: 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(7, 0, 0);
+    justify-content: center;
+    align-items:center;
+    width: fit-content;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputDiv {
+    /* left: -20px; */
+    /* margin-left: 50px; */
+    width: 80%;
+    height: 35px;
+    display: inline-block;
+}
+
+.searchBtnDrink {
+    border-left: 1px solid black;
+    border-radius: 15px;
+    /* background-color: #e7dcdc; */
+    /* color: white; */
+    height: 30px;
+    width: fit-content;
+    display: inline-block;
+  }
+
+  .searchBtnmeal  {
+    border-left: 1px solid black;
+    border-radius: 15px;
+    /* background-color: #e7dcdc; */
+    /* color: white; */
+    height: 30px;
+    width: fit-content;
+    display: inline-block;
+  }
+
+.yourSearches {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: large;
+    font-weight: bold;
+    background-color: cyan;
+    border-radius: 15px;
+}
+
+.drinkInfoBox {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 100 px;
+    margin: 0 auto;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding: 5px;
+    justify-content: center;
+    font-size: large;
+    background-color:white;
+    border-radius: 15px;
+}
+
+.drinkInfoBoxb {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 100 px;
+    margin: 0 auto;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding: 5px;
+    justify-content: center;
+    font-size: x-large;
+    border-radius: 15px;
+    background-color: yellow;
+}
+
+.mealInfoBox {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 100 px;
+    margin: 0 auto;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding: 5px;
+    justify-content: center;
+    font-size: large;
+    background-color:white;
+    border-radius: 15px;
+}
+.mealInfoBoxb {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 100 px;
+    margin: 0 auto;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding: 5px;
+    justify-content: center;
+    font-size: x-large;
+    border-radius: 15px;
+    background-color: yellow;
+}
+  
+.stockIngredients {
+    /* border: 1px solid rgb(7, 0, 0); */
+    width: 80%;
+    height: fit-content;
+    min-height: 40px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: large;
+    font-weight: bold;
+    /* background-color: rgb(13, 39, 25); */
+    /* color: whitesmoke; */
+    border-radius: 15px;
+}
+
+.clearBtnDrink {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: large;
+    font-weight: bold;
+    background-color: cyan;
+    border-radius: 15px;
+    }
+
+.clearBtnmeal {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: large;
+    font-weight: bold;
+    background-color: cyan;
+    border-radius: 15px;
+    }
+
+    .wrap {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+        justify-content: center;
+        align-items:center;
+        margin-left: 20px;
+    }
+    
+    .wrap iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
