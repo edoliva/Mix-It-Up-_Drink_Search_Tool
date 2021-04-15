@@ -46,6 +46,9 @@ var mealSearchDisplay5 = document.querySelector("#mealSearchDisplay5");
 var mealSearchDisplay6 = document.querySelector("#mealSearchDisplay6");
 var mealSearchDisplay7 = document.querySelector("#mealSearchDisplay7");
 
+var homepage = document.querySelector(".homepage");
+var mealpage = document.querySelector(".mealpage");
+var drinkpage = document.querySelector(".drinkpage");
 var drinkDisplay = document.querySelector(".drink-display");
 var drinkDisplayHeader = document.querySelector(".drink-display-header");
 var recipeDisplay = document.querySelector(".recipe-drink-display");
@@ -110,26 +113,41 @@ initmeal()
 
 // render all searched DRINK ingredients
 function renderDrinks () {
-if (drinkIngredients[drinkIngredients.length - 1] != null) {
-  drinkSearchDisplay0.textContent = drinkIngredients[drinkIngredients.length - 1];
-  drinkSearchDisplay1.textContent = drinkIngredients[drinkIngredients.length - 2];
-  drinkSearchDisplay2.textContent = drinkIngredients[drinkIngredients.length - 3];
-  drinkSearchDisplay3.textContent = drinkIngredients[drinkIngredients.length - 4];
-  drinkSearchDisplay4.textContent = drinkIngredients[drinkIngredients.length - 5];
-  drinkSearchDisplay5.textContent = drinkIngredients[drinkIngredients.length - 6];
-  drinkSearchDisplay6.textContent = drinkIngredients[drinkIngredients.length - 7];
-}};
-// render all searched MEAL ingredients
+  for (var i = 0; i<=6; i++) {  
+    var drinkSearchDisplayi = document.querySelector("#drinkSearchDisplay"+i);
+    if (drinkIngredients[drinkIngredients.length - 1] != null) {
+      drinkSearchDisplayi.textContent = drinkIngredients[drinkIngredients.length - (i+1)];
+}}}
+
+//render all searched MEAL ingredients
 function renderMeals () {
-if (mealIngredients[mealIngredients.length - 1] != null) {
-  mealSearchDisplay0.textContent = mealIngredients[mealIngredients.length - 1];
-  mealSearchDisplay1.textContent = mealIngredients[mealIngredients.length - 2];
-  mealSearchDisplay2.textContent = mealIngredients[mealIngredients.length - 3];
-  mealSearchDisplay3.textContent = mealIngredients[mealIngredients.length - 4];
-  mealSearchDisplay4.textContent = mealIngredients[mealIngredients.length - 5];
-  mealSearchDisplay5.textContent = mealIngredients[mealIngredients.length - 6];
-  mealSearchDisplay6.textContent = mealIngredients[mealIngredients.length - 7];
-} else {"No search"}};
+  for (var i = 0; i<=6; i++) {  
+    var mealSearchDisplayi = document.querySelector("#mealSearchDisplay"+i);
+    if (mealIngredients[mealIngredients.length - 1] != null) {
+      mealSearchDisplayi.textContent = mealIngredients[mealIngredients.length - (i+1)];
+}}}
+
+// function renderDrinks () {
+// if (drinkIngredients[drinkIngredients.length - 1] != null) {
+//   drinkSearchDisplay0.textContent = drinkIngredients[drinkIngredients.length - 1];
+//   drinkSearchDisplay1.textContent = drinkIngredients[drinkIngredients.length - 2];
+//   drinkSearchDisplay2.textContent = drinkIngredients[drinkIngredients.length - 3];
+//   drinkSearchDisplay3.textContent = drinkIngredients[drinkIngredients.length - 4];
+//   drinkSearchDisplay4.textContent = drinkIngredients[drinkIngredients.length - 5];
+//   drinkSearchDisplay5.textContent = drinkIngredients[drinkIngredients.length - 6];
+//   drinkSearchDisplay6.textContent = drinkIngredients[drinkIngredients.length - 7];
+// }};
+// // render all searched MEAL ingredients
+// function renderMeals () {
+// if (mealIngredients[mealIngredients.length - 1] != null) {
+//   mealSearchDisplay0.textContent = mealIngredients[mealIngredients.length - 1];
+//   mealSearchDisplay1.textContent = mealIngredients[mealIngredients.length - 2];
+//   mealSearchDisplay2.textContent = mealIngredients[mealIngredients.length - 3];
+//   mealSearchDisplay3.textContent = mealIngredients[mealIngredients.length - 4];
+//   mealSearchDisplay4.textContent = mealIngredients[mealIngredients.length - 5];
+//   mealSearchDisplay5.textContent = mealIngredients[mealIngredients.length - 6];
+//   mealSearchDisplay6.textContent = mealIngredients[mealIngredients.length - 7];
+// } else {"No search"}};
 
 // BUTTONS
 // swith between HOMESCREEN, DRINK, MEAL search
@@ -144,6 +162,9 @@ homeScreenBtn.addEventListener("click", function (event) {
   mealSearchAside.setAttribute("style", "display: none;");
   recipemealDisplay.setAttribute("style", "display: none;");
   recipemealDisplayHeader.setAttribute("style", "display: none;");
+  homepage.setAttribute("style", "display: none;");
+  mealpage.setAttribute("style", "display: none;");
+  drinkpage.setAttribute("style", "display: inline-block;");
   // storeingredients();
   renderDrinks ();
   drinkDisplayFunction();
@@ -153,11 +174,14 @@ homeScreenBtn.addEventListener("click", function (event) {
   drinkSearchAside.setAttribute("style", "display: none;");
   mealDisplay.setAttribute("style", "display: inline-block;");
   mealDisplayHeader.setAttribute("style", "display: inline-block;");
+  mealpage.setAttribute("style", "display: inline-block;");
   mealSearchAside.setAttribute("style", "display: inline-block;");
   recipemealDisplay.setAttribute("style", "display: none;");
   recipemealDisplayHeader.setAttribute("style", "display: none;");
   recipeDisplay.setAttribute("style", "display: none;");
   recipeDisplayHeader.setAttribute("style", "display: none;");
+  homepage.setAttribute("style", "display: none;");
+  drinkpage.setAttribute("style", "display: none;");
   renderMeals();
   mealDisplayFunction();
 });
@@ -573,8 +597,3 @@ fetch(mealIngURL)
 
 
 //Sandy 
-
-
-
-
-

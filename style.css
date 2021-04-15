@@ -130,11 +130,44 @@ aside {
 
  */
 
+ .header {
+    text-align: left;
+    /* background-color:whitesmoke; */
+    color: rgb(2, 0, 0);
+    /* border-radius: 5px; */
+    padding-left: 20px;
+    /* border: 1px solid rgb(7, 0, 0); */
+    justify-content: center;
+    align-items:center;
+  }
+
  h5 {
     font-size: large;
     text-align: left;
     font-weight: bold;
 }
+
+.homepage {
+    border-radius: 0px;
+    width: fit-content; 
+    height: fit-content; 
+    position: fixed;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .mealpage {
+        border-radius: 0px;
+        width: 100%; 
+        height: 100%; 
+        display: none;
+        }
+        .drinkpage {
+            border-radius: 0px;
+            width: 100%; 
+            height: 100%; 
+            display: none;
+            }
 
 img {
 border-radius: 35px;
@@ -285,6 +318,23 @@ button:focus {
     border-radius: 15px;
 }
 
+.navSearches {
+    border: 1px solid rgb(7, 0, 0);
+    width: 15%;
+    height: 40px;
+    margin: 0 auto;
+    margin-left: 15px;
+    text-align: center;
+    padding: 5px;
+    display: inline-flexbox;
+    justify-content: center;
+    align-items:center;
+    font-size: large;
+    font-weight: bold;
+    background-color: cyan;
+    border-radius: 15px;
+}
+
 .drinkInfoBox {
     border: 1px solid rgb(7, 0, 0);
     width: 80%;
@@ -359,6 +409,22 @@ button:focus {
 }
 
 .clearBtnDrink {
+    border: 1px solid rgb(7, 0, 0);
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: large;
+    font-weight: bold;
+    background-color: cyan;
+    border-radius: 15px;
+    }
+
+.pastBtnDrink {
     border: 1px solid rgb(7, 0, 0);
     width: 80%;
     height: 40px;
