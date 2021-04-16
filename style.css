@@ -323,8 +323,8 @@ button:focus {
 
 .navSearches {
     border: 1px solid rgb(7, 0, 0);
-    width: 15%;
-    height: 40px;
+    width: fit-content;
+    height: fit-content;
     margin: 0 auto;
     margin-left: 15px;
     text-align: center;
@@ -394,7 +394,6 @@ button:focus {
 }
   
 .stockIngredients {
-    /* border: 1px solid rgb(7, 0, 0); */
     width: 80%;
     height: fit-content;
     min-height: 40px;
@@ -406,8 +405,6 @@ button:focus {
     align-items:center;
     font-size: large;
     font-weight: bold;
-    /* background-color: rgb(13, 39, 25); */
-    /* color: whitesmoke; */
     border-radius: 15px;
 }
 
@@ -477,6 +474,78 @@ button:focus {
         height: 100%;
         justify-content: center;
     }
+    .asideDiv {
+        width: 25%;
+        float: left;
+    }
+
+@media screen and (max-width: 800px) {
+    .stockIngredients, .clearBtnmeal, .clearBtnDrink, .yourSearches {
+        width: 55%;
+        min-width: fit-content;
+        height: fit-content;
+        text-align: center;
+        float: left;
+        font-size: small;
+    }
+    h3 {
+        font-size: medium;
+    }
+    .asideDiv {
+        width: 25%;
+        float: left;
+    }
+    .image {
+        border-radius: 35px;
+        width: 300px; 
+        height: 300px; 
+        }
+    
+}
+@media screen and (max-width: 445px) {
+    .stockIngredients, .clearBtnmeal, .clearBtnDrink, .yourSearches {
+        width: 80%;
+        height: fit-content;
+        min-height: fit-content;
+        margin: 0 auto;
+        text-align: left;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        font-size: x-small;
+        font-weight:normal;
+        border-radius: 5px;
+        float: none;
+    }
+    h3 {
+        font-size: medium;
+    }
+    h2 {
+        font-size: medium;
+    }
+    .asideDiv {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .navSearches {
+        margin-left: 2px;
+        padding: 2px;
+        display: inline-flexbox;
+        font-size: small;
+        font-weight: normal;
+    }
+    .drinkInfoBox, .mealInfoBox, .drinkInfoBoxb, .mealInfoBoxb {
+        width: 95%;
+        font-size: small;
+    }
+    .image {
+        border-radius: 35px;
+        width: 200px; 
+        height: 200px; 
+        }
+}
 
 
 /* Nick */
