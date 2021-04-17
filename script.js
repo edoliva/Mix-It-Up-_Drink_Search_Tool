@@ -22,6 +22,7 @@ var clearBtnDrink = document.querySelector("#clearBtnDrink");
 var homeScreenBtn = document.querySelector("#home-Btn");
 var drinkBtn = document.querySelector("#drink-Btn");
 var mealBtn = document.querySelector("#meal-Btn");
+var beerBtn = document.querySelector("#beer-Btn");
 var ingredient1 = document.querySelector("#ingredient1");
 // meal
 var searchBtnmeal = document.querySelector("#searchBtnmeal");
@@ -49,6 +50,7 @@ var mealSearchDisplay7 = document.querySelector("#mealSearchDisplay7");
 var homepage = document.querySelector(".homepage");
 var mealpage = document.querySelector(".mealpage");
 var drinkpage = document.querySelector(".drinkpage");
+var beerpage = document.querySelector(".beerpage");
 var drinkDisplay = document.querySelector(".drink-display");
 var drinkDisplayHeader = document.querySelector(".drink-display-header");
 var recipeDisplay = document.querySelector(".recipe-drink-display");
@@ -164,6 +166,7 @@ homeScreenBtn.addEventListener("click", function (event) {
   recipemealDisplayHeader.setAttribute("style", "display: none;");
   homepage.setAttribute("style", "display: none;");
   mealpage.setAttribute("style", "display: none;");
+  beerpage.setAttribute("style", "display: none;");
   drinkpage.setAttribute("style", "display: inline-block;");
   // storeingredients();
   renderDrinks ();
@@ -182,8 +185,25 @@ homeScreenBtn.addEventListener("click", function (event) {
   recipeDisplayHeader.setAttribute("style", "display: none;");
   homepage.setAttribute("style", "display: none;");
   drinkpage.setAttribute("style", "display: none;");
+  beerpage.setAttribute("style", "display: none;");
   renderMeals();
   mealDisplayFunction();
+}); beerBtn.addEventListener("click", function (event) {
+  drinkDisplay.setAttribute("style", "display: none;");
+  drinkDisplayHeader.setAttribute("style", "display: none;");
+  drinkSearchAside.setAttribute("style", "display: none;");
+  mealDisplay.setAttribute("style", "display: none;");
+  mealDisplayHeader.setAttribute("style", "display: none;");
+  mealpage.setAttribute("style", "display: none;");
+  mealSearchAside.setAttribute("style", "display: none;");
+  recipemealDisplay.setAttribute("style", "display: none;");
+  recipemealDisplayHeader.setAttribute("style", "display: none;");
+  recipeDisplay.setAttribute("style", "display: none;");
+  recipeDisplayHeader.setAttribute("style", "display: none;");
+  homepage.setAttribute("style", "display: none;");
+  drinkpage.setAttribute("style", "display: none;");
+  beerpage.setAttribute("style", "display: inline;");
+  getApi();
 });
 
 // save and then display searched DRINK ingredient
