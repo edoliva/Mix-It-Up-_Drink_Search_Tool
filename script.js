@@ -592,8 +592,115 @@ fetch(mealIngURL)
 };
 
 //Nick 
+var searchBtnBeer = document.querySelector("#searchBtnBeer");
+var beerInput = document.querySelector("beer-input");
+var beerList = document.querySelector("beer-list");
+var beerDisp = document.querySelector("beerDisplay");
+var beerName = document.querySelector("beerResults");
+
+function getApi() {
+  var x = document.getElementById("beer-input");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+  var fetchButton = document.getElementById('searchBtnBeer');
+  var beerContainer = document.getElementById('beerResults');
+  var clearBtnBeer = document.querySelector("#clearBtnBeer");
+
+  function getApi() {
+  var beerURL = "https://api.punkapi.com/v2/beers/random";
+
+  fetch(beerURL)
+  .then(response => response.json())
+  .then(data => {
+    var beerSearchDisplayEl = document.getElementById("beerSearchDisplay");
+    var beerResultsEl = document.getElementById("beerResults");
+    var beerAbvEl = document.getElementById("beerABV");
+    var beerDescEl =  document.getElementById("beerDescription");
+    var beerPairingEl = document.getElementById("beerPair");
+    var beerImageEl = document.getElementById("beerImg");
+    beerResultsEl.textContent = data[0].name;
+    beerSearchDisplayEl.textContent = data[0].name;
+    beerAbvEl.textContent = data[0].abv;
+    beerImageEl.src = data[0].image_url;
+    beerDescEl.textContent = data[0].description;
+    beerPairingEl.textContent = data[0].food_pairing;
+    console.log(data);
+    console.log(beerResultsEl);
+    console.log(beerSearchDisplayEl);
+    console.log(beerAbvEl);
+    console.log(beerDescEl);
+    console.log(beerPairingEl);
+    console.log(localStorage);
+
+  });
+}
+
+fetchButton.addEventListener('click', getApi);
+
+        clearButton.addEventListener("click", function (event) {
+            localStorage.removeItem('beerResults');
+            location.reload();
+          });
+
+// Create a new <a> element for the random beer
+var beerListEl = document.createElement("a");
+beerListEl.href = "beerResults";
+
+// Add our class(es) to the <a> element
+beerListEl.classList.add("collection-item");
+beerListEl.classList.add("hoverable");
+beerListEl.classList.add("waves-effect");
+
+// Create a <span> child (for our <a> element above)
+var beerResultsEl = document.createElement("span");
+beerResultsEl.textContent = data[0].name;
+
+// Attach our <span> element as a child of our <a> element
+beerResultsEl.appendChild("a");
+
+// <<<<<<< Home-page
+// // Grab our <ul class="beerList"> & attach our <a> element to it
+// var ulbeerListEl = document.querySelector("ul.beerList");
+// ulbeerListEl.appendChild(a.beerResultsEl);
 
 
+/*fetchButton.addEventListener("click",function(){
+  var $ = function(searchBtnBeer) {
+    return document.querySelector(beerResults);
+  };
+  function dynamicEvent() {
+    this.innerHTML = "Random Beer Success.";
+    this.beerList = "Random Beer Success";
+  }
+  var beerResultsEl = $("#beerResults").getElementByTagName('a');
+  for (var i = 0; i < beerResultsEl.length; i++) {
+    var beerResultsEl = beerResults[i];
+    beerResultsEl.onclick = dynamicEvent;
+  }
+  $('generate').onsubmit = function() {
+    var dynamicValue = $('.generate-input').value;
+    if(!dynamicValue) {
 
+    } else {
+      $('.generate-submit').value = 'Click the button!';
+
+      var a = document.createElement('li');
+      li.className = 'beerList';
+      li.innerHtml = beerResultsEl;
+
+      $('#beerResults').appendChild(a);
+      li.onclick = dynamicEvent;
+    }
+    return false;
+  }
+})();
+//};
+;*/
 
 //Sandy 
+// >>>>>>> main
