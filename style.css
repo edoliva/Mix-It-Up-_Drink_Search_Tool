@@ -705,7 +705,11 @@ img#beerImg {
   
 }
 
-.randomCocktail, .navHeader {
+.randomCocktail {
+    display: none;
+}
+
+.navHeader {
     display: none;
 }
 
