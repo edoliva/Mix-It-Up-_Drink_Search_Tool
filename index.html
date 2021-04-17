@@ -22,15 +22,20 @@
         </div>
         </nav> -->
     <header class="header">
-        <h3>Mix-It-Up</h3>
+        <h2>Mix-It-Up</h2>
     </header>
     <nav class=navHeader>
-        <button id="home-Btn" class="searchBtn"> Home Screen </button> <button id="drink-Btn" class="searchBtn"> Cocktails </button>  <button id="meal-Btn" class="searchBtn"> Meals </button> 
+        <button id="home-Btn" class="navSearches"> Home Screen </button> <button id="drink-Btn" class="navSearches"> Cocktails </button>  <button id="meal-Btn" class="navSearches"> Meals </button> 
     </nav>
+    <div class=homepage>
+        <div class=drinkInfoBox><h2>Click a link in the navbar to get some interesting drink or meal ideas.</h2></div></br>
+        <div class=drinkInfoBox><h3>Search by ingredient for a unique recipe, or explore new ingredients you may not have known about!</h3></div></br>
+        <img class=homepage src="Images/Homepage.jpg" alt="Open Air"></img>
+    </div>
 
     <div class="row">
 
-        <div class="col s3">
+        <div class="asideDiv">
           <!-- Grey navigation panel -->
 
             <!-- DRINKS -->
@@ -42,6 +47,7 @@
                     <button id="searchBtnDrink" class="searchBtnDrink">🔍 </button>
                     <div class=inputDiv><input type="text" name="ingredient-text" id="ingredient-text" placeholder="Enter ingredient here..." /></div> </br> </br>
                     <div class="yourSearches"><strong>Your searches:</strong></div></br>
+                    <button class="clearBtnDrink" id=clearBtnDrink>Clear search history</button> </br>
                     <button class="stockIngredients" id=ingredient0><span id="drinkSearchDisplay0"></span></button> </br>       
                     <button class="stockIngredients" id=ingredient1><span id="drinkSearchDisplay1"></span></button> </br>
                     <button class="stockIngredients" id=ingredient2><span id="drinkSearchDisplay2"></span></button> </br>
@@ -49,7 +55,7 @@
                     <button class="stockIngredients" id=ingredient4><span id="drinkSearchDisplay4"></span></button> </br>
                     <button class="stockIngredients" id=ingredient5><span id="drinkSearchDisplay5"></span></button> </br>
                     <button class="stockIngredients" id=ingredient6><span id="drinkSearchDisplay6"></span></button> </br>
-                    <button class="clearBtnDrink" id=clearBtnDrink>Clear search history</button> </br>
+
             </aside>
 
             <!-- MEAL -->
@@ -61,6 +67,9 @@
                     <button id="searchBtnmeal" class="searchBtnmeal">🔍 </button>
                     <div class=inputDiv><input type="text" name="meal-ingredient-text" id="meal-ingredient-text" placeholder="Enter ingredient here..." /></div></br> </br>
                     <div class="yourSearches"><strong>Your searches:</strong></div></br>
+                    <button class="clearBtnmeal" id=clearBtnmeal>Clear search history</button> </br>
+                    <!-- <div id="past-meal-button-list">
+                    </div> -->
                     <button class="stockIngredients" id=mealIngredient0><span id="mealSearchDisplay0"></span></button> </br>     
                     <button class="stockIngredients" id=mealIngredient1><span id="mealSearchDisplay1"></span></button> </br>
                     <button class="stockIngredients" id=mealIngredient2><span id="mealSearchDisplay2"></span></button> </br>
@@ -68,25 +77,12 @@
                     <button class="stockIngredients" id=mealIngredient4><span id="mealSearchDisplay4"></span></button> </br>
                     <button class="stockIngredients" id=mealIngredient5><span id="mealSearchDisplay5"></span></button> </br>
                     <button class="stockIngredients" id=mealIngredient6><span id="mealSearchDisplay6"></span></button> </br>
-                    <button class="clearBtnmeal" id=clearBtnmeal>Clear search history</button> </br>
             </aside>
         
         </div>
   
-        <div class="col s9 teal accent-2">
+        <div class="col s9 cyan accent-2">
           <!-- Teal page content  -->
-        
-              <!-- display page 1 with DRINK name -->
-                <div class=drink-display-header id=drink-button-list-header>
-                    <header class="header">
-                        <h3>Suggested drinks:</h3>
-                    </header>
-                    <ul class=header2>
-                        <h5> Click on a drink to get the recipe and step-by-step mixing instructions.</h5>
-                    </ul>
-                </div>
-                <div class=drink-display id=drink-button-list>
-                </div>
 
                 <!-- display page 2 with DRINK recipe, depending on user input search-->
                 <div class=recipe-drink-display-header id=ingredient-button-list-header>
@@ -103,17 +99,19 @@
                 </div> 
                 <div class=recipe-drink-display id=ingredient-button-list>
                 </div> 
-            
-                <!-- display page 1 with MEAL names -->
-                <div class="meal-display-header" id="meal-button-list-header">
-                    <header class="header">
-                        <h3>Suggested meals:</h3>
-                    </header>
-                    <ul class="header2">
-                        <h5> Click on a meal to get the recipe and step-by-step preperation instructions.</h5>
-                    </ul>
+                <!-- display page 1 with DRINK name -->
+                <div class=drink-display-header id=drink-button-list-header>
+                <header class="header">
+                    <h3>Suggested drinks:</h3>
+                </header>
+                <ul class=header2>
+                    <h5> Click on a drink to get the recipe and step-by-step mixing instructions.</h5>
+                </ul>
                 </div>
-                <div class="meal-display" id="meal-button-list">
+                <div class=drink-display id=drink-button-list>
+                </div>
+                <div>
+                    <img class=drinkpage src="Images/Cocktails.png" alt="Open Air"></img>
                 </div>
 
                 <!-- display page 2 with MEAL recipe, depending on user input search-->
@@ -136,6 +134,21 @@
                 </div>
                 <div class=recipe-meal-display id=meal-ingredient-button-list>
                 </div>
+
+                <!-- display page 1 with MEAL names -->
+                <div class="meal-display-header" id="meal-button-list-header">
+                    <header class="header">
+                        <h3>Suggested meals:</h3>
+                    </header>
+                    <ul class="header2">
+                        <h5> Click on a meal to get the recipe and step-by-step preperation instructions.</h5>
+                    </ul>
+                </div>
+                <div class="meal-display" id="meal-button-list">
+                </div>
+                <div>
+                    <img class=mealpage src="Images/Meals.jpg" alt="Open Air"></img>
+                    </div>
         </div>
 
         <!-- Nick -->   
