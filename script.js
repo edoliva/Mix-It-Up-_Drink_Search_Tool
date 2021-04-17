@@ -23,6 +23,7 @@ var homeScreenBtn = document.querySelector("#home-Btn");
 var drinkBtn = document.querySelector("#drink-Btn");
 var mealBtn = document.querySelector("#meal-Btn");
 var beerBtn = document.querySelector("#beer-Btn");
+var randomCocktailBtn = document.querySelector("#randomcocktail-Btn");
 var ingredient1 = document.querySelector("#ingredient1");
 // meal
 var searchBtnmeal = document.querySelector("#searchBtnmeal");
@@ -48,9 +49,12 @@ var mealSearchDisplay6 = document.querySelector("#mealSearchDisplay6");
 var mealSearchDisplay7 = document.querySelector("#mealSearchDisplay7");
 
 var homepage = document.querySelector(".homepage");
+var navHeader = document.querySelector(".navHeader");
 var mealpage = document.querySelector(".mealpage");
 var drinkpage = document.querySelector(".drinkpage");
 var beerpage = document.querySelector(".beerpage");
+var randomCocktailpage = document.querySelector(".randomCocktail");
+var ageVerify = document.querySelector(".ageVerify");
 var drinkDisplay = document.querySelector(".drink-display");
 var drinkDisplayHeader = document.querySelector(".drink-display-header");
 var recipeDisplay = document.querySelector(".recipe-drink-display");
@@ -154,7 +158,19 @@ function renderMeals () {
 // BUTTONS
 // swith between HOMESCREEN, DRINK, MEAL search
 homeScreenBtn.addEventListener("click", function (event) {
-  window.location.href="./random.html";
+  drinkDisplay.setAttribute("style", "display: none;");
+  drinkDisplayHeader.setAttribute("style", "display: none;");
+  drinkSearchAside.setAttribute("style", "display: none;");
+  mealDisplay.setAttribute("style", "display: none;");
+  mealDisplayHeader.setAttribute("style", "display: none;");
+  mealSearchAside.setAttribute("style", "display: none;");
+  recipemealDisplay.setAttribute("style", "display: none;");
+  recipemealDisplayHeader.setAttribute("style", "display: none;");
+  homepage.setAttribute("style", "display: inline-block;");
+  mealpage.setAttribute("style", "display: none;");
+  beerpage.setAttribute("style", "display: none;");
+  drinkpage.setAttribute("style", "display: none;");
+  randomCocktailpage.setAttribute("style", "display: none;");
 }); drinkBtn.addEventListener("click", function (event) {
   drinkDisplay.setAttribute("style", "display: inline-block;");
   drinkDisplayHeader.setAttribute("style", "display: inline-block;");
@@ -168,6 +184,7 @@ homeScreenBtn.addEventListener("click", function (event) {
   mealpage.setAttribute("style", "display: none;");
   beerpage.setAttribute("style", "display: none;");
   drinkpage.setAttribute("style", "display: inline-block;");
+  randomCocktailpage.setAttribute("style", "display: none;");
   // storeingredients();
   renderDrinks ();
   drinkDisplayFunction();
@@ -186,6 +203,7 @@ homeScreenBtn.addEventListener("click", function (event) {
   homepage.setAttribute("style", "display: none;");
   drinkpage.setAttribute("style", "display: none;");
   beerpage.setAttribute("style", "display: none;");
+  randomCocktailpage.setAttribute("style", "display: none;");
   renderMeals();
   mealDisplayFunction();
 }); beerBtn.addEventListener("click", function (event) {
@@ -202,9 +220,30 @@ homeScreenBtn.addEventListener("click", function (event) {
   recipeDisplayHeader.setAttribute("style", "display: none;");
   homepage.setAttribute("style", "display: none;");
   drinkpage.setAttribute("style", "display: none;");
+  randomCocktailpage.setAttribute("style", "display: none;");
   beerpage.setAttribute("style", "display: inline;");
-  getApi();
-});
+  getApi();  
+}); randomCocktailBtn.addEventListener("click", function (event) {
+  drinkDisplay.setAttribute("style", "display: none;");
+  drinkDisplayHeader.setAttribute("style", "display: none;");
+  drinkSearchAside.setAttribute("style", "display: none;");
+  mealDisplay.setAttribute("style", "display: none;");
+  mealDisplayHeader.setAttribute("style", "display: none;");
+  mealpage.setAttribute("style", "display: none;");
+  mealSearchAside.setAttribute("style", "display: none;");
+  recipemealDisplay.setAttribute("style", "display: none;");
+  recipemealDisplayHeader.setAttribute("style", "display: none;");
+  recipeDisplay.setAttribute("style", "display: none;");
+  recipeDisplayHeader.setAttribute("style", "display: none;");
+  homepage.setAttribute("style", "display: none;");
+  drinkpage.setAttribute("style", "display: none;");
+  beerpage.setAttribute("style", "display: none;");
+  randomCocktailpage.setAttribute("style", "display: inline;");
+  randomCocktail();
+}); 
+
+
+
 
 // save and then display searched DRINK ingredient
 searchBtnDrink.addEventListener("click", function (event) {
@@ -725,7 +764,10 @@ beerResultsEl.appendChild("a");
 //Sandy 
 // >>>>>>> main
 function displayNav(){
-  window.location.href="./homepage.html"
+  // window.location.href="./index.html"
+  ageVerify.setAttribute("style", "display: none;")
+  navHeader.setAttribute("style", "display: inline-block;");
+
   }
 
 function displayMessage(){
@@ -734,4 +776,61 @@ function displayMessage(){
   age.style.display = "none";
   message.style.display = "block";
   
+
+  
 }
+
+function randomCocktail () {
+  $(document).ready(function(){
+      getRandomCocktail();
+      });
+      
+      
+      function goBack(){
+          window.location.href = './homepage.html'
+        }
+        function checkCount(){
+          window.location.href = './random.html';
+          //getRandomCocktail();
+        }
+        
+        function getRandomCocktail(){
+          fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+          .then(
+            function(response) {
+              if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' +
+                  response.status);
+                return;
+              }
+        
+              // Examine the text in the response
+              response.json().then(function(data) {
+                //console.log(data);
+                displayRandomCocktail(data);
+              });
+            }
+          )
+          .catch(function(err) {
+            console.log('Fetch Error :-S', err);
+          });
+        } 
+        
+        function displayRandomCocktail(cocktail){
+      //   count++;
+      //   console.log(count);
+         console.log(cocktail.drinks[0]);
+         var displayDrink = document.createElement("h1");
+         displayDrink.style.textAlign = "center";
+         var drinkImage = document.createElement("img");
+         drinkImage.style.display = "block";
+         drinkImage.style.marginLeft = "auto";
+         drinkImage.style.marginRight = "auto";
+         document.body.appendChild(displayDrink);
+         document.body.appendChild(drinkImage);
+        
+         displayDrink.innerHTML = cocktail.drinks[0].strDrink;
+         drinkImage.src = cocktail.drinks[0].strDrinkThumb;
+        }
+      };
+  
