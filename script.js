@@ -152,7 +152,7 @@ function renderMeals () {
 // BUTTONS
 // swith between HOMESCREEN, DRINK, MEAL search
 homeScreenBtn.addEventListener("click", function (event) {
-  location.reload();
+  window.location.href="./random.html";
 }); drinkBtn.addEventListener("click", function (event) {
   drinkDisplay.setAttribute("style", "display: inline-block;");
   drinkDisplayHeader.setAttribute("style", "display: inline-block;");
@@ -704,3 +704,14 @@ beerResultsEl.appendChild("a");
 
 //Sandy 
 // >>>>>>> main
+function displayNav(){
+  window.location.href="./homepage.html"
+  }
+
+function displayMessage(){
+  var age = document.getElementById("ageVerify");
+  var message = document.getElementById("restrictMessage")
+  age.style.display = "none";
+  message.style.display = "block";
+  
+}
