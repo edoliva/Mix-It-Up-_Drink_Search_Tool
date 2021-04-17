@@ -826,9 +826,11 @@ function randomCocktail () {
          drinkImage.style.display = "block";
          drinkImage.style.marginLeft = "auto";
          drinkImage.style.marginRight = "auto";
-         document.body.appendChild(displayDrink);
-         document.body.appendChild(drinkImage);
-        
+
+         var randomDrinkDisplay = document.querySelector("#random-drink-display");
+         randomDrinkDisplay.appendChild(drinkImage);
+         randomDrinkDisplay.appendChild(displayDrink);
+
          displayDrink.innerHTML = cocktail.drinks[0].strDrink;
          drinkImage.src = cocktail.drinks[0].strDrinkThumb;
         }
