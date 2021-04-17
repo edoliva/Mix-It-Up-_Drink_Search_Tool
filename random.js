@@ -38,8 +38,11 @@ $(document).ready(function(){
     //   console.log(count);
        console.log(cocktail.drinks[0]);
        var displayDrink = document.createElement("h1");
+       displayDrink.style.textAlign = "center";
        var drinkImage = document.createElement("img");
-       
+       drinkImage.style.display = "block";
+       drinkImage.style.marginLeft = "auto";
+       drinkImage.style.marginRight = "auto";
        document.body.appendChild(displayDrink);
        document.body.appendChild(drinkImage);
       
