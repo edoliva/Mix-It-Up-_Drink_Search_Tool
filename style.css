@@ -550,6 +550,10 @@ button:focus {
 
 /* Nick */
 
+.beerpage {
+    display: none;
+}
+
 .nav-wrapper {
   border-bottom: 3px solid darkslategray !important;
 }
@@ -628,6 +632,7 @@ h5 {
   border: solid black !important;
   border-radius: 3rem !important;
   margin-bottom: 2vh !important;
+  width: 100%;
 }
 
 .collection.with-header .collection-item {
